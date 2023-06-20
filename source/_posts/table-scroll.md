@@ -1,10 +1,10 @@
 ---
 title: antd Table 表格滚动高度适配
 description: 在开发一个后台管理系统，某一页面用到了table表格，产品的需求是：table表格无论展示多少条数据，表头和分页信息要展示出来,此时我们一定首先想到了table表格的 scroll 属性，然后问题是 ：scrollY一定是动态的才能适配不同的设备高度；
-headimg: /images/ava.jpeg
+headimg: /images/antd.jpeg
 categories:
-  - React
-date: 2020-03-21
+  - AntDesign
+date: 2021-03-21
 tags:
   - antDesign
 sidebar: [toc] # 放置任何你想要显示的侧边栏部件
