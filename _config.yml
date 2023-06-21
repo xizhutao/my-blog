@@ -102,4 +102,7 @@ theme: hexo-theme-volantis
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  #repo改为repo: git@你的域名:/var/repo/hexo.git
+  repo: git@121.40.198.111:/blog/repo/hexo.git
+  branch: master
