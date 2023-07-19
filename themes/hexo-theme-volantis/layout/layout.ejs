@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="<%- config.language %>">
+  <%- partial('_partial/scripts/_ctrl') _%> <%- partial('_partial/head') _%>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <!-- import body_begin begin-->
+    <%_ if (config.import && config.import.body_begin){ _%> <%_
+    getList(config.import.body_begin).forEach(function(item){ _%> <%- item %> <%_ }) _%> <%_ } _%>
+    <!-- import body_begin end-->
+    <!-- Custom Files bodyBegin begin-->
+    <%- volantis_inject('bodyBegin') %>
+    <!-- Custom Files bodyBegin end-->
+    <%- partial('_partial/header', null, {cache: false, path: path}) %>
+    <div id="l_body">
+      <%- partial('_partial/cover') %>
+      <div id="safearea">
+        <div class="body-wrapper"><%- body %></div>
+        <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+        <a id="s-top" class="fa-solid fa-arrow-up fa-fw" title="top"></a>
+      </div>
+    </div>
+    <div><%- partial('_partial/scripts/index') %></div>
+
+    <!-- import body_end begin-->
+    <%_ if (config.import && config.import.body_end){ _%> <%_ getList(config.import.body_end).forEach(function(item){
+    _%> <%- item %> <%_ }) _%> <%_ } _%>
+    <!-- import body_end end-->
+    <!-- Custom Files bodyEnd begin-->
+    <%- volantis_inject('bodyEnd') %>
+    <!-- Custom Files bodyEnd end-->
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+    <!-- 页面点击小红心 -->
+    <script type="text/javascript" src="/js/love.js"></script>
+    <!-- 单击显示文字
+    <script type="text/javascript" src="/js/click_show_text.js"></script>
+    <canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none"></canvas>
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script type="text/javascript" src="/js/fireworks.js"></script> -->
+    <!-- 雪花特效 -->
+    <script type="text/javascript" src="\js\snow.js"></script>
+    <!--动态线条背景-->
+    <!-- <script
+      type="text/javascript"
+      color="red"
+      opacity="0.7"
+      zIndex="-2"
+      count="200"
+      src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"
+    ></script> -->
+    <!-- 仓鼠宠物 -->
+    <!-- <iframe
+      width="300"
+      height="200"
+      frameborder="0"
+      style="position: fixed; background-color: #f4f4f4; left: 0; bottom: 0; z-index: 1"
+      src="https://cdn.abowman.com/widgets/hamster/hamster.html?up_bgColor=ffffff&up_bodyColor=e6debe&up_earColor=d4c898&up_snoutColor=f7f4e9&up_eyeColor=000000&up_feetColor=d4c898&up_tailColor=e6debe&up_waterColor=e0efff&up_foodColor=cba920&up_wheelColor=ffffff&up_wheelOuterColor=ff4d4d&up_wheelCenterColor=e4eb2f&up_wheelSpokeColor=dedede"
+    ></iframe> -->
+    <!-- 地球 -->
+    <!-- <script
+      type="text/javascript"
+      src="//rf.revolvermaps.com/0/0/6.js?i=5h4k6608thl&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80"
+      async="async"
+    ></script> -->
+  </body>
+</html>
